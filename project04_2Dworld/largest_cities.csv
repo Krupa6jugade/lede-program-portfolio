@@ -1,0 +1,53 @@
+,city,country,continent,lat,population_city,rank_within_country
+25,Nairobi,Kenya,Africa,-1.2830000000000001,2750547,1
+47,Lima,Peru,South America,-12.043,7737002,1
+273,São Paulo,Brazil,South America,-23.546999999999997,10021295,1
+358,Santiago,Chile,South America,-33.457,4837295,1
+361,Sydney,Australia,Oceania,-33.868,4627345,1
+363,Cape Town,South Africa,Africa,-33.926,3433441,1
+365,Buenos Aires,Argentina,South America,-34.613,13076300,1
+391,Kinshasa,Democratic Republic of the Congo,Africa,-4.328,7785965,1
+429,Jakarta,Indonesia,Asia,-6.215,8540121,1
+437,Dar es Salaam,Tanzania,Africa,-6.8229999999999995,2698652,1
+466,Luanda,Angola,Africa,-8.837,2776168,1
+498,Singapore,Singapore,Asia,1.29,3547809,1
+540,Caracas,Venezuela,South America,10.488,3000000,1
+554,Ho Chi Minh,Vietnam,Asia,10.823,3467331,1
+719,Bangkok,Thailand,Asia,13.754000000000001,5104476,1
+769,Quezon City,Philippines,Asia,14.649000000000001,2761720,1
+773,Dakar,Senegal,Africa,14.694,2476400,1
+860,Yangon,Myanmar [Burma],Asia,16.805,4477638,1
+952,Santo Domingo,Dominican Republic,North America,18.5,2201941,1
+966,Mumbai,India,Asia,19.073,12691836,1
+975,Mexico City,Mexico,North America,19.428,12294193,1
+987,Mogadishu,Somalia,Africa,2.037,2587183,1
+1018,Hong Kong,Hong Kong,Asia,22.285999999999998,7012738,1
+1043,Havana,Cuba,North America,23.133000000000003,2163824,1
+1054,Dhaka,Bangladesh,Asia,23.71,10356500,1
+1067,Riyadh,Saudi Arabia,Asia,24.688000000000002,4205961,1
+1070,Karachi,Pakistan,Asia,24.906,11624219,1
+1074,Taipei,Taiwan,Asia,25.048000000000002,7871900,1
+1178,Cairo,Egypt,Africa,30.063000000000002,7734614,1
+1192,Shanghai,China,Asia,31.221999999999998,22315474,1
+1248,Baghdad,Iraq,Asia,33.341,7216000,1
+1256,Casablanca,Morocco,Africa,33.588,3144909,1
+1279,Kabul,Afghanistan,Asia,34.528,3043532,1
+1316,Tokyo,Japan,Asia,35.6,8336599,1
+1318,Tehran,Iran,Asia,35.7,7153309,1
+1368,Seoul,South Korea,Asia,37.566,10349312,1
+1401,Pyongyang,North Korea,Asia,39.034,3222000,1
+1439,Bogotá,Colombia,South America,4.61,7674366,1
+1468,Madrid,Spain,Europe,40.417,3255944,1
+1483,New York,United States,North America,40.714,8175133,1
+1498,Istanbul,Turkey,Asia,41.013999999999996,11174257,1
+1523,Rome,Italy,Europe,41.891999999999996,2318895,1
+1574,Almaty,Kazakhstan,Asia,43.257,2000900,1
+1587,Toronto,Canada,North America,43.7,2600000,1
+1737,Paris,France,Europe,48.853,2138551,1
+1781,Abidjan,Ivory Coast,Africa,5.31,3677115,1
+1823,Kiev,Ukraine,Europe,50.455,2797553,1
+1845,London,United Kingdom,Europe,51.513000000000005,7556900,1
+1865,Berlin,Germany,Europe,52.523999999999994,3426354,1
+1917,Moscow,Russia,Europe,55.751999999999995,10381222,1
+1989,Lagos,Nigeria,Africa,6.454,9000000,1
+2135,Addis Ababa,Ethiopia,Africa,9.025,2757729,1

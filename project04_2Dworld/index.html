@@ -1,0 +1,124 @@
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <style>
+    svg { background: #c6caed; }
+
+    text {
+      fill: #fff;
+    }
+
+    span {
+      color: red;
+      cursor: pointer;
+    }
+
+    .axis path{
+      display:none;
+    }
+  /*  .axis line {
+        fill: none;
+        stroke: black;
+        shape-rendering: crispEdges;
+    }*/
+    .axis line {
+        fill: none;
+        stroke: white;
+        stroke-dasharray: 2,2;
+        shape-rendering: crispEdges;
+        }
+    .axis text {
+        font-family: Raleway;
+        font-size: 15px;
+    }
+    </style>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Gianna-Carina Gruen: Data visualization portfolio</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="../css/bootstrap.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="../css/1-col-portfolio.css" rel="stylesheet">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- default: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700|Scope+One&amp;subset=latin-ext" rel="stylesheet">
+
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+        <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="../">Portfolio</a>
+            </div>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav">
+                    <li>
+                        <a href="../meta/about.html">About</a>
+                    </li>
+                    <li>
+                        <a href="../meta/contact.html">Contact</a>
+                    </li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container -->
+    </nav>
+
+    <hr>
+
+  <div class="container">
+    <p> <a href="..">Back to all projects</a></p>
+
+    <h1>2D world: Which cities are on a similar latitude?</h1>
+
+    <p>This is a <i>slightly</i> interactive reproduction of a static graphic by Lisa Rost that she had published <a href ="https://twitter.com/lisacrost/status/745731918214344704">on Twitter</a>.</br>
+    For data source, project documentation and details ideation, take a look at <a href="https://github.com/gcgruen/Can-I-projects/tree/master/project01_2Dworld">this github repo</a>.</p>
+
+    <p>Each line represents the biggest city for each country in case it has more than 2 million inhabitants. </br>
+    The length of the line corresponds to the city population. Mouse over the lines to learn about population size.</p>
+
+    <div id="chart-1"></div>
+
+
+    <!-- This is D3, our graphing library -->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/4.2.2/d3.min.js"></script>
+
+    <!--
+      This is d3-tip, which will give us d3 tooltips
+      https://github.com/Caged/d3-tip
+    -->
+    <!-- step 0 for tooltips -->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/d3-tip/0.7.1/d3-tip.min.js"></script>
+      <link rel="stylesheet" href="tooltip.css">
+
+    <!-- Now we include our actual visualization -->
+      <script src="project-01-interactive.js"></script>
+  </div>
+</body>
+</html>

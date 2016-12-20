@@ -1,0 +1,316 @@
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <style>
+    svg { background: white; }
+
+    span {
+      color: black;
+      cursor: pointer;
+    }
+
+    .highlighted.n {
+        stroke: #3a4a7c;
+    }
+
+    .highlighted.w {
+        stroke: #318F86;
+    }
+
+    .highlighted.s {
+        stroke: #ff5347;
+    }
+
+    .highlighted.e {
+        stroke: #e8d03a;
+    }
+
+    .highlighted.x {
+        stroke: #824884;
+    }
+
+    .non-highlighted-label {
+        display:none;
+    }
+
+    .highlighted-label {
+        display:inline;
+    }
+
+    .button {
+        border: none;
+        font-family: "Roboto";
+        font-size: 13px;
+        color: white;
+        focus: ;
+
+    }
+    .button:focus{
+        outline:none;
+    }
+
+/*coloring buttons and defining active state color*/
+    #northern {
+        background-color: #3a4a7c;
+    }
+    #northern:active {
+        background-color: #538eed;
+        outline:0;
+    }
+
+    #western {
+        background-color: #318F86;
+    }
+    #western:active {
+        background-color: #538eed;
+        outline:0;
+    }
+
+    #southern {
+        background-color: #ff5347;
+    }
+    #southern:active {
+        background-color: #538eed;
+        outline:0;
+    }
+
+    #eastern {
+        background-color: #e8d03a;
+    }
+
+    #eastern:active {
+        background-color: #538eed;
+        outline:0;
+    }
+
+    #others {
+        background-color: #824884;
+    }
+    #others:active {
+        background-color: #538eed;
+        outline:0;
+    }
+
+    #reset:active{
+        background-color: #538eed;
+        outline:0;
+    }
+
+/*psoitioning*/
+    #holding {
+        position:relative;
+    }
+
+    .axis text {
+        font-family:"Roboto";
+        font-size: 12px;
+        fill: grey;
+    }
+
+    .axis path, .axis line {
+        stroke: lightgrey;
+    }
+
+    </style>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Gianna-Carina Gruen: Data visualization portfolio</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="../css/bootstrap.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="../css/1-col-portfolio.css" rel="stylesheet">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- default: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700|Scope+One&amp;subset=latin-ext" rel="stylesheet">
+
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+        <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="../">Portfolio</a>
+            </div>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav">
+                    <li>
+                        <a href="../meta/about.html">About</a>
+                    </li>
+                    <li>
+                        <a href="../meta/contact.html">Contact</a>
+                    </li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container -->
+    </nav>
+
+    <hr>
+
+  <div class="container">
+    <p> <a href="..">Back to all projects</a></p>
+
+    <h1>Youth unemployment in Europe: Far from being history only</h1>
+
+    <p class="lead">When the economic crisis hit Europe in 2008, pictures of protesting unemployed young people in Spain and Greece became iconic symbols of the crisis. Data analysis shows how the situation got even worse after that.</p>
+
+    <p>From the offset of the crisis in 2008, the situation got even worse in countries like Greece, Spain or Croatia and reached highest rates in 2013. In the following years, situation improved slightly. Still, across Europe 5 million young people under 25 years old are currently unemployed. That equals every fifth young European.
+    </p>
+
+    <p>
+    However the situation varies widely across the continent: Coutries iconic for the crisis are still worse off than Western European countries for example.
+    </p>
+    
+
+
+    <h3><center>Explore: How unemployment evolved</center></h3>
+
+<!--     <p><small><i>You can explore this graphic in several different ways:</i>
+    <br> Either you can move your mouse over the lines to highlight them and see what country they refer to. 
+    </br>Alternatively you can click one of the buttons to highlight all countries of a certain region.
+    </br>Lastly you can select two countries from the dropdown menus to directly compare them.
+    </br>To go back to the initial view, just click the Reset button.</small></p> -->
+
+
+
+<!-- https://www.quora.com/What-countries-are-considered-to-be-Western-Europe -->
+    <div><center>
+    <button class="button" id="eastern">Eastern Europe</button>
+    <button class="button" id="southern">Southern Europe</button>
+    <button class="button" id="western">Western Europe</button>
+    <button class="button" id="northern">Northern Europe</button>
+    <button class="button" id="others">Non-European countries</button>
+    </center></div>
+    <div><p></p></div>
+    <div><center> Compare 
+        <select id="selection-one">
+            <option value="Austria">Austria</option>
+            <option value="Belgium">Belgium</option>
+            <option value="Bulgaria">Bulgaria</option>
+            <option value="Croatia">Croatia</option>
+            <option value="Cyprus">Cyprus</option>
+            <option value="Czech-Republic">Czech Republic</option>
+            <option value="Denmark">Denmark</option>
+            <option value="Estonia">Estonia</option>
+            <option value="Finland">Finland</option>
+            <option value="France">France</option>
+            <option value="Germany">Germany</option>
+            <option value="Greece">Greece</option>
+            <option value="Hungary">Hungary</option>
+            <option value="Iceland">Iceland</option>
+            <option value="Ireland">Ireland</option>
+            <option value="Italy">Italy</option>
+            <option value="Japan">Japan</option>
+            <option value="Latvia">Latvia</option>
+            <option value="Lithuania">Lithuania</option>
+            <option value="Luxembourg">Luxembourg</option>
+            <option value="Malta">Malta</option>
+            <option value="Netherlands">Netherlands</option>
+            <option value="Norway">Norway</option>
+            <option value="Poland">Poland</option>
+            <option value="Portugal">Portugal</option>
+            <option value="Romania">Romania</option>
+            <option value="Slovenia">Slovenia</option>
+            <option value="Slovakia">Sklovakia</option>
+            <option value="Spain">Spain</option>
+            <option value="Sweden">Sweden</option>
+            <option value="Turkey">Turkey</option>
+            <option value="United-Kingdom">United Kingdom</option>
+            <option value="USA">USA</option>
+        </select>
+     to 
+        <select id="selection-two">
+            <option value="Austria">Austria</option>
+            <option value="Belgium">Belgium</option>
+            <option value="Bulgaria">Bulgaria</option>
+            <option value="Croatia">Croatia</option>
+            <option value="Cyprus">Cyprus</option>
+            <option value="Czech-Republic">Czech Republic</option>
+            <option value="Denmark">Denmark</option>
+            <option value="Estonia">Estonia</option>
+            <option value="Finland">Finland</option>
+            <option value="France">France</option>
+            <option value="Germany">Germany</option>
+            <option value="Greece">Greece</option>
+            <option value="Hungary">Hungary</option>
+            <option value="Iceland">Iceland</option>
+            <option value="Ireland">Ireland</option>
+            <option value="Italy">Italy</option>
+            <option value="Japan">Japan</option>
+            <option value="Latvia">Latvia</option>
+            <option value="Lithuania">Lithuania</option>
+            <option value="Luxembourg">Luxembourg</option>
+            <option value="Malta">Malta</option>
+            <option value="Netherlands">Netherlands</option>
+            <option value="Norway">Norway</option>
+            <option value="Poland">Poland</option>
+            <option value="Portugal">Portugal</option>
+            <option value="Romania">Romania</option>
+            <option value="Slovenia">Slovenia</option>
+            <option value="Slovakia">Sklovakia</option>
+            <option value="Spain">Spain</option>
+            <option value="Sweden">Sweden</option>
+            <option value="Turkey">Turkey</option>
+            <option value="United-Kingdom">United Kingdom</option>
+            <option value="USA">USA</option>
+        </select>
+        <button class="button" id="reset">Reset</button>        
+        </center>
+        </div>
+    <div id="chart-1" align="center"></div>
+
+   
+
+    <p>In fact: Whereas in Germany many traineeship places remain empty due to a lack of qualified or interested trainees, thousands of young Spanish people are desperately seeking a job. To just shuttle them to Europe is neither a solution, experts say. Because in the long run, Spain's economy will need skilled workers. 
+    </p>
+    <p>But if the situation for them won't change, experts <a href="http://www.zeit.de/2015/20/jugendarbeitslosigkeit-europa-ausbildung-finanzkrise">fear</a>, they might become a lost generation: hard to reintegrate into work force, not knowing about structured work-days. Estimates put the production loss at 153 billion euros per year — which is in the long run much more expensive then channeling money for immediate creation of traineeship places.
+    </p>
+ 
+    <p>At the beginning of December 2016 the European Union announced to <a href="http://www.europarl.europa.eu/news/en/news-room/20161129IPR53614/eu-budget-2017-approved-better-support-for-youth-and-growth-initiatives">invest additional 500 million euros</a> in the <a href="http://ec.europa.eu/social/main.jsp?catId=1176">Youth Employment Initiative</a> that's meant to guarantee each European under 25 years old to find a job within four month after leaving school.
+    </p>
+
+    <p>Experts <a href="http://www.zeit.de/2015/20/jugendarbeitslosigkeit-europa-ausbildung-finanzkrise/seite-2">estimate</a> though that it would take up to 75 billion euros to put all 5 million unemployed young Europeans into labour.</p>
+
+    <p> Studies <a href="http://www.bosch-stiftung.de/content/language1/downloads/RBS_ZEW-Studie_Jugendarbeitslosigkeit_Executive_Summary.pdf">highlight</a>, how national economy and labour market structure are crucial to implementing sustainable job initiatives. Additionally, critics say that it's too difficult for countries to obtain money from the fund — which is one of the reason why the situation is improving only slowly.</p>
+
+<hr>
+    <p>Data source: <a href="http://appsso.eurostat.ec.europa.eu/nui/show.do?dataset=une_rt_m&lang=en">Eurostat (2016), une_rt_m</a></p>
+
+</div>
+
+
+
+    <!-- This is D3, our graphing library -->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/4.2.2/d3.min.js"></script>
+
+
+    <!-- Now we include our actual visualization -->
+      <script src="project-05-youthunemployment.js"></script>
+  </div>
+</body>
+</html>
